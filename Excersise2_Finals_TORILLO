@@ -1,0 +1,47 @@
+# 1. Create and write to file
+try:
+    # Ask user for a message
+    message = input("Enter a short note/message: ")
+
+    # Write to file (w mode)
+    with open("notes.txt", "w") as file:
+        file.write(message + "\n")
+
+    print("\nMessage saved successfully!")
+
+except Exception as e:
+    print("Error while writing to file:", e)
+
+
+# 2. Read file
+try:
+    print("\nReading file content:")
+    
+    with open("notes.txt", "r") as file:
+        content = file.read()
+        print(content)
+
+except FileNotFoundError:
+    print("Error: File not found.")
+except Exception as e:
+    print("Error while reading file:", e)
+
+
+# 3. Append new data
+try:
+    # Ask user for another note
+    new_message = input("\nEnter another note: ")
+
+    # Append to file (a mode)
+    with open("notes.txt", "a") as file:
+        file.write(new_message + "\n")
+
+    print("\nUpdated file content:")
+
+    # Display updated content
+    with open("notes.txt", "r") as file:
+        updated_content = file.read()
+        print(updated_content)
+
+except Exception as e:
+    print("Error while appending to file:", e)
