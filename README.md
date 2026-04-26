@@ -1,3 +1,4 @@
 # Akeshi_Torillo-Chris_Alombro
-first github goofy ahh  activity
-i dont really lknopw what7 to write here gahd damnit
+first github 
+HIII MAAM nara ari akong act 2 and 3
+-Torilo
