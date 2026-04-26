@@ -1,0 +1,31 @@
+try: #Excersise#3_Finals 
+    # Ask user input
+    username = input("Enter your username pls: ")
+    
+    age_input = input("NIce, now Enter your age: ")
+    age = int(age_input)  # possible error here (ValueError)
+
+    # Save to file
+    with open("users.txt", "a") as file:
+        file.write(f"{username} - {age}\n")
+
+    print("\nUser saved successfully!\n")
+
+except ValueError:
+    print("Error: Age must be a number.")
+
+except Exception as e:
+    print("Unexpected error:", e)
+
+# Display all saved users
+try:
+    print("\nSaved Users:")
+    with open("users.txt", "r") as file:
+        for line in file:
+            print(line.strip())
+
+except FileNotFoundError:
+    print("No users found yet.")
+
+finally:
+    print("\nSystem complete.")
